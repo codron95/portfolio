@@ -1,0 +1,523 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>LogicPro - home</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+    <link href='https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/font.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fullPage.css' %}"/>
+    <link rel="stylesheet" href=" {% static 'css/baseline.css' %}">
+
+
+    <script src="{% static 'js/misc.js' %}"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <!-- below 600 -->
+    <div class="container-fluid responsive">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#respnav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand-custom" href="#"><img src="{% static 'res/logo-img-200.png' %}" class="img-responsive logo-brand-responsive"></a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="respnav">
+            <ul class="nav navbar-nav">
+                <li><a onclick="$.fn.fullpage.moveTo(2)" href="javascript:void(0)">About</a></li>
+                <li><a onclick="$.fn.fullpage.moveTo(3)" href="javascript:void(0)">Services</a></li>
+                <li><a onclick="$.fn.fullpage.moveTo(4)" href="javascript:void(0)">Products</a></li>
+                <li><a onclick="$.fn.fullpage.moveTo(5)" href="javascript:void(0)">Clients</a></li>
+                <li><a onclick="$.fn.fullpage.moveTo(6)" href="javascript:void(0)">Testimonials</a></li>
+                <li><a onclick="$.fn.fullpage.moveTo(7)" href="javascript:void(0)">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- below 600 -->
+
+    <div class="navi-container center-align">
+        <div class="navi">
+            <a onclick="$.fn.fullpage.moveTo(2)" class="font" href="javascript:void(0)">About</a>
+            <a onclick="$.fn.fullpage.moveTo(3)"class="font" href="javascript:void(0)">Services</a>
+            <a onclick="$.fn.fullpage.moveTo(4)" class="font" href="javascript:void(0)">Products</a>
+        </div>
+        <a href="javascript:void(0)" onclick="$.fn.fullpage.moveTo(1)"><img src="{% static 'res/logo-img-200.png' %}" class="logo-brand"/></a>
+        <div class="navi">
+            <a onclick="$.fn.fullpage.moveTo(5)" class="font" href="javascript:void(0)">Clients</a>
+            <a onclick="$.fn.fullpage.moveTo(6)" class="font" href="javascript:void(0)">Testimonials</a>
+            <a onclick="$.fn.fullpage.moveTo(7)" class="font" href="javascript:void(0)">Contact Us</a>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div class="toolbar">
+    <ul>
+        <li><span onclick="notice_view()" class="fa fa-envelope font-lg"></span></li>
+        <li><span onclick="downloads_view()" class="fa fa-download font-lg"></span></li>
+    </ul>
+    
+</div>
+
+<div class="services-overlay">
+    <p align="right" class="thin-padded shift-down-5"><span style="cursor:pointer;" onclick="hide()" class="fa fa-close font-lg"></span></p>
+    <div id="ser-cont" class="container service-overlay-container">
+        
+    </div>
+</div>
+
+<div id="fullpage">
+    <div id="intro" class="section">
+        <div class="slide slide-intro">
+
+            <div class="intro-overlay">
+
+            </div>
+
+            <p class="font font-xxlg font-bold welcome-text-container foreground">
+                <span class="welcome-text">Consulting |</span>&nbsp
+                <span class="welcome-text">Software |</span>
+                <span class="welcome-text">Solutions |</span>
+                <span class="welcome-text">Training</span></p>
+            <img class="logo-big foreground" src="{% static 'res/logo-big.png' %}"/>
+
+            <p class="quote foreground">
+                <span class="fa fa-quote-left"></span>
+                <span class="font font-lg">Quality services with logic undenied</span>
+                <span class="fa fa-quote-right"></span>
+            </p>
+
+            <p class="btn-container foreground">
+                <span onclick="$.fn.fullpage.moveTo(5)" class="btn btn-info btn-custom font font-md font-black">OUR CLIENTS</span>&nbsp&nbsp
+                <span onclick="$.fn.fullpage.moveTo(2)" class="btn btn-info btn-custom font font-md font-black">ABOUT US</span>&nbsp&nbsp
+                <span onclick="$.fn.fullpage.moveTo(3)" class="btn btn-info btn-custom font font-md font-black">OUR SERVICES</span>
+            </p>f
+
+            <p class="intro-footer">
+                <a class="font-logo-color" href="#">
+                    <span onclick="$.fn.fullpage.moveTo(7)" class="font font-black font-slg">Get in touch</span> <span class="fa fa-angle-right font-slg"></span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <div style="margin-top:-5%;" class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12 center-align">
+                    <iframe style="width:100%; height:290px" src="https://www.youtube.com/embed/8prNtUN8U68" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div  class="col-lg-6 col-xs-12 center-align vertical-align">
+                    <p class="font font-black font-lg font-logo-color">About Us</p>
+                    <p class="font font-black font-md font-justify padded about-content-container">
+                        We are a service provider company having system oriented and IT enabled
+                        solutions for providing various outsource services like Payroll,
+                        HR Management, PF, Tax and other statutory compliances along-with
+                        efficient data management to provide desired outsource solutions to
+                        our clients. Apart from providing outsource services we are also into
+                        development of Intranet / Internet based applications, training for office
+                        automation applications, manpower resourcing, recruitment services and providing
+                        data processing tools and software consultancy to our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="about-footer">
+            <div class="row">
+                <div class="col-lg-4 center-align">
+                        <span class="fa fa-calendar font-xxlg font-white">
+
+                        </span><br>
+                    <span class="font font-white font-md fat-line">20+ Years Of Experience</span>
+                </div>
+                <div class="col-lg-4 center-align">
+                        <span class="fa fa-user font-xxlg font-white">
+
+                        </span><br>
+                    <span class="font font-white font-md fat-line">50+ Clients Served</span>
+                </div>
+                <div class="col-lg-4 center-align">
+                        <span class="fa fa-check-circle font-xxlg font-white">
+
+                        </span><br>
+                    <span class="font font-white font-md fat-line">Quality Service</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="services" class="section">
+            <p class="font font-lg font-logo-color font-bold center-align">Services</p>
+            <div class="container service-container">
+                <div class="row">
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/services/hr.png' %}" class="service-monikers" /><br>
+                        <span class="font font-lg font-logo-color big-fat-line">Human Resource</span><br>
+                        <p class="font-justify"><span class="font font-md font-black thin-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p onclick="service_view(0)" class="center-align shift-down">
+                            <span class="btn btn-info btn-custom-2 font font-md font-white bg-color border-color">
+                                View all
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/services/it.png' %}" class="service-monikers"/><br>
+                        <span class="font font-lg font-logo-color big-fat-line">Information Technology</span><br>
+                        <p class="font-justify"><span class="font font-md font-black thin-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p onclick="service_view(1)" class="center-align shift-down">
+                            <span class="btn btn-info btn-custom-2 font font-md font-white bg-color border-color">
+                                View all
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/services/fin.png' %}" class="service-monikers"/><br>
+                        <span class="font font-lg font-logo-color big-fat-line">Finance</span><br>
+                        <p class="font-justify"><span class="font font-md font-black thin-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p onclick="service_view(2)" class="center-align shift-down">
+                            <span class="btn btn-info btn-custom-2 font font-md font-white bg-color border-color">
+                                View all
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+    </div>
+
+
+    <div class="section">
+        <div class="slide">
+            <div class="container">
+                <p class="font font-lg font-logo-color font-bold center-align">Products</p>
+                <div class="row shift-down-40">
+                    <div class="col-lg-5">
+                        <p class="center-align">
+                            <span class="font font-slg font-logo-color">LogicPro Bid</span>
+                        </p>
+                        <p class="font-justify shift-down-40">
+                            <span class="font font-md font-black">
+                                We are a service provider company having system oriented and IT enabled solutions for providing various outsource services like Payroll, HR Management, PF, Tax and other statutory compliances along-with efficient data management to provide desired outsource solutions to our clients. Apart from providing outsource services we are also into development of Intranet / Internet based applications, training for office automation applications, manpower resourcing, recruitment services and providing data processing tools and software consultancy to our clients.
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-7 center-align">
+                        <img class="img-products" src="{% static 'res/products/bid.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="clients" class="section fp-auto-height">
+        <p style="padding-top:30px; height:100px;" class="font font-lg font-white bg-color-black font-bold center-align">Our Clients</p>
+        <div id="cli-cont" class="container-fluid clients-container">
+            
+        </div>
+
+        <p style="padding-top:30px; height:100px; margin-top:10px;" class="font font-lg font-white bg-color-black font-bold center-align">Our Associates</p>
+
+        <marquee id="assoc-cont" scrollamount="10" class="assoc-cont">
+            <!-- associates marquee -->
+        </marquee>
+
+        
+    </div>
+
+
+
+    <div id="testimonials" class="section">
+        <div class="slide bg-color-white">
+            <p class="font font-lg font-logo-color font-bold center-align">Testimonials</p>
+            <div class="container service-container">
+                <div class="row">
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="slide bg-color-white">
+            <p class="font font-lg font-logo-color font-bold center-align">Testimonials</p>
+            <div class="container service-container">
+                <div class="row">
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 center-align service-cols">
+                        <img src="{% static 'res/test/bill.jpeg' %}" class="img-circle service-monikers" /><br>
+                        <p class="font-justify"><span class="font font-md font-black fat-line">
+                            Human resource management (HRM or simply HR) is the management
+                            of human resources. It is a function in organizations designed
+                            to maximize employee performance in service of an employer's strategic
+                            objectives
+
+                        </span></p>
+                        <p class="align-right shift-down">
+                            <span class="font font-logo-color font-md">
+                                - Bill Gates
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="contact" class="section fp-auto-height">
+        <p class="font font-lg font-logo-color font-bold center-align">Contact Us</p>
+
+        <div class="container">
+            <div class="row contact-icons-container">
+
+                <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 center-align">
+                    <div class="contact-icons">
+                        <span class="fa fa-facebook font-logo-color font-xlg font-contact-icons"></span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 center-align">
+                    <div class="contact-icons">
+                        <span class="fa fa-linkedin font-logo-color font-xlg font-contact-icons"></span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-sm-2 col-md-2 col-xs-2 center-align">
+                    <div class="contact-icons">
+                        <span class="fa fa-twitter font-logo-color font-xlg font-contact-icons"></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row contact-form-container-row">
+                <div class="col-lg-6 col-lg-offset-3 center-align">
+                    <form role="form">
+                        <input id="name" type="text" class="form-control text-custom" placeholder="Name" />
+                        <input id="email" type="text" class="form-control text-custom" placeholder="Email" />
+                        <input id="subject" type="text" class="form-control text-custom" placeholder="Subject" />
+                        <select id="service" class="form-control text-custom" name="service">
+                        {% for ser in services %}
+                            <option value="{{ser.name}}">{{ser.name}}</option>
+                        {% endfor %}
+                        </select>
+                        <textarea id="query" rows="5" class="form-control text-custom" placeholder="Query"></textarea>
+                        <span onclick="register_query()" class="btn btn-default btn-custom-form font font-md">Submit</span>
+
+                    </form>
+                    <p class="center-align shift-down-5"><img class="loader" src="{% static 'res/spinner.gif' %}"></p></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top:2%;" class="container-fluid">
+            <div class="row contact-office-row">
+                <div class="col-lg-2 col-lg-offset-1 center-align font-justify">
+                    <span class="font font-smd font-white font-bold-600">
+                        Registered Office
+                    </span><br>
+                    <span class="font font-white font-smd">
+                        Logicpro Software Services<br>
+                        127, 3rd Floor,<br>
+                        Bank Enclave, Delhi - 110 092
+                    </span>
+                </div>
+
+                <div class="col-lg-2 center-align font-justify">
+                    <span class="font font-smd font-white font-bold-600">
+                        Office - Delhi
+                    </span><br>
+                    <span class="font font-white font-smd">
+                        Logicpro Software Services 817,<br>
+                        Laxmi Deep Building,<br>
+                        Laxmi Nagar, Distt Center,<br>
+                        Delhi - 110 092<br>
+                        <strong>Phone: +91-11-43685996</strong>
+                    </span>
+                </div>
+
+                <div class="col-lg-2 center-align font-justify">
+                    <span class="font font-smd font-white font-bold-600">
+                        Office - Delhi
+                    </span><br>
+                    <span class="font font-white font-smd">
+                        Logicpro Software Services 817,<br>
+                        Laxmi Deep Building,<br>
+                        Laxmi Nagar, Distt Center,<br>
+                        Delhi - 110 092<br>
+                        <strong>Phone: +91-11-43685996</strong>
+                    </span>
+                </div>
+
+                <div class="col-lg-2 center-align font-justify">
+                    <span class="font font-smd font-white font-bold-600">
+                        Office - Delhi
+                    </span><br>
+                    <span class="font font-white font-smd">
+                        Logicpro Software Services 817,<br>
+                        Laxmi Deep Building,<br>
+                        Laxmi Nagar, Distt Center,<br>
+                        Delhi - 110 092<br>
+                        <strong>Phone: +91-11-43685996</strong>
+                    </span>
+                </div>
+
+                <div class="col-lg-3 center-align font-justify">
+                    <span class="font font-smd font-white font-bold-600">
+                        Office - Delhi
+                    </span><br>
+                    <span class="font font-white font-smd">
+                        Logicpro Software Services 817,<br>
+                        Laxmi Deep Building,<br>
+                        Laxmi Nagar, Distt Center,<br>
+                        Delhi - 110 092<br>
+                        <strong>Phone: +91-11-43685996</strong>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="section fp-auto-height footer-main">
+        <p class="center-align">
+            <span class="font font-smd font-white">copyright LogicPro. All rights reserved.</span>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
