@@ -124,6 +124,6 @@ def contact(request):
 	try:
 		send_mail("New Query: "+subject,message,email,["bharatendu@logicpro.co.in","amazing.rohan@gmail.com",],fail_silently=False)
 		return HttpResponse("Your query has been registered")
-	except:
-		return HttpResponse("There was an error. Please try again later")
+	except Exception as e:
+		return HttpResponse("There was an error. Please try again later"+e)
 
