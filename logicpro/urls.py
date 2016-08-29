@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^associates/', views.assocs),
     url(r'^contact/', views.contact),
     url(r'^$', views.index),
+    url(r'^404/$',views.four),
   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

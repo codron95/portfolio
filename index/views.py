@@ -127,3 +127,5 @@ def contact(request):
 	except Exception as e:
 		return HttpResponse("There was an error. Please try again later"+e)
 
+def four(request):
+	return render(request,"404.html")
