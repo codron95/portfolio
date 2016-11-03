@@ -15,7 +15,7 @@ doc_type=(
 # Create your models here.
 class service(models.Model):
 	name=models.CharField(max_length=255,default="")
-	desc=models.CharField(max_length=255,default="")
+	desc=models.CharField(max_length=255,default="",blank=True)
 	kind=models.IntegerField(choices=service_type,default=0)
 	photo=models.ImageField(upload_to='services/',default=0)
 

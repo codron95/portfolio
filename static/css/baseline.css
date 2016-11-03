@@ -484,6 +484,12 @@ body{
     margin-top:-20px;
 }
 
+.service-titles{
+    display:inline-block;
+    line-height:30px;
+    margin-top:10px;
+}
+
 
 
 @media screen and (max-width:700px){

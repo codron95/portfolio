@@ -80,7 +80,7 @@ function service_view(type){
                     $("<div class='row match-parent shift-down-40' id='row_"+cur+"'></div>").appendTo('#ser-cont');
                     $("<div class='col-lg-4 center-align padded service-cols' id='col_"+cur+"_"+i+"''><div>").appendTo('#row_'+cur);
                     $("<img src='"+ser['url']+"' class='service-monikers-small'/><br>").appendTo('#col_'+cur+"_"+i);
-                    $("<span class='font font-md font-logo-color big-fat-line'>"+ser['name']+"</span><br>").appendTo('#col_'+cur+"_"+i);
+                    $("<span class='font font-md font-logo-color service-titles'>"+ser['name']+"</span><br>").appendTo('#col_'+cur+"_"+i);
                     $("<p class='font-justify'><span class='font font-sm font-black thin-line'>"+ser['content']+
                         "</span></p>").appendTo('#col_'+cur+"_"+i);
                     cur++;
@@ -90,7 +90,7 @@ function service_view(type){
                 else{
                     $("<div class='col-lg-4 center-align padded service-cols' id='col_"+cur+"_"+i+"''><div>").appendTo('#row_'+(cur-1));
                     $("<img src='"+ser['url']+"' class='service-monikers-small'/><br>").appendTo('#col_'+cur+"_"+i);
-                    $("<span class='font font-md font-logo-color big-fat-line'>"+ser['name']+"</span><br>").appendTo('#col_'+cur+"_"+i);
+                    $("<span class='font font-md font-logo-color service-titles'>"+ser['name']+"</span><br>").appendTo('#col_'+cur+"_"+i);
                     $("<p class='font-justify'><span class='font font-sm font-black thin-line'>"+ser['content']+
                         "</span></p>").appendTo('#col_'+cur+"_"+i);
                 }
